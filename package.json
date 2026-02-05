@@ -2,9 +2,12 @@
   "name": "my-meal-management-project",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
+    "dev": "bash -c 'unset npm_config_prefix && source $HOME/.nvm/nvm.sh && nvm use 20 && next dev \"$@\"' --",
     "lint": "eslint .",
     "start": "next start"
   },
